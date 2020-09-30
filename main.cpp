@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "StickyNote.h"
-//#include "Sort.h"
+#include "Sort.h"
 
 using namespace std;
 
@@ -25,5 +25,7 @@ void printVector() {
 
 int main() {
   init();
-  bubbleSort(vec);
+  printVector();
+  vec = sort::bubbleSort(vec);
+  printVector();
 }
