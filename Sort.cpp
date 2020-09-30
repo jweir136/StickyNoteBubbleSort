@@ -12,7 +12,7 @@ namespace sort {
       *yp = temp;  
   }  
 
-  void bubbleSort(vector<StickyNote> vec) {
+  vector<StickyNote> bubbleSort(vector<StickyNote> vec) {
     bool cont;
 
     do {
@@ -25,5 +25,7 @@ namespace sort {
         }
       }
     } while (cont);
+
+    return vec;
   }
 }
