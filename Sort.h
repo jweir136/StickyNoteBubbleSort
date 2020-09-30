@@ -16,7 +16,7 @@ namespace sort {
   /*****************************************
   **    CREATE BUBBLE SORT METHOD         **
   *****************************************/
-  void bubbleSort(vector<StickyNote>);
+  vector<StickyNote> bubbleSort(vector<StickyNote>);
 }
 
 #endif
