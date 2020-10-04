@@ -26,6 +26,6 @@ void printVector() {
 int main() {
   init();
   printVector();
-  vec = sort::bubbleSort(vec);
+  sort::bubbleSort(vec);
   printVector();
 }
