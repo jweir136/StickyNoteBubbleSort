@@ -1,4 +1,3 @@
-#include <any>
 #include <vector>
 #include <iostream>
 #include "Sort.h"
@@ -6,13 +5,13 @@
 using namespace std;
 
 namespace sort {
-  void swap(StickyNote *xp, StickyNote *yp) {  
-      StickyNote temp = *xp;  
-      *xp = *yp;  
-      *yp = temp;  
-  }  
+  void swap(vector<StickyNote> &vec, int index1, int index2) {
+    StickyNote StickyNoteOne = vec[index1];
+    vec[index1] = vec[index2];
+    vec[index2]= StickyNoteOne;
+  }
 
-  vector<StickyNote> bubbleSort(vector<StickyNote> vec) {
+  void bubbleSort(vector<StickyNote> &vec) {
     bool cont;
 
     do {
@@ -20,12 +19,10 @@ namespace sort {
 
       for (int i = 0; i < vec.size() - 1; i++) {
         if (vec[i].getValue() > vec[i+1].getValue()) {
-          swap(&vec[i], &vec[i+1]);
+          swap(vec, i, i+1);
           cont = true;
         }
       }
     } while (cont);
-
-    return vec;
   }
 }
