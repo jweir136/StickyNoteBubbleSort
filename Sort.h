@@ -11,12 +11,12 @@ namespace sort {
   **    CREATE METHOD TO SWAP 2 ELEMENTS **
   **      IN VECTOR                      **
   ****************************************/
-  void swap(vector<StickyNote> vec, int index1, int index2);
+  void swap(vector<StickyNote> &vec, int index1, int index2);
 
   /*****************************************
   **    CREATE BUBBLE SORT METHOD         **
   *****************************************/
-  vector<StickyNote> bubbleSort(vector<StickyNote>);
+  void bubbleSort(vector<StickyNote> &vec);
 }
 
 #endif
